@@ -1,4 +1,4 @@
-Avi-Job-Portal
+Avi Job Portal
 ==============
 
 Avi Job portal is under the development process. This is developed by the company <a href="http://aviitsolutions.com" target="_blank">Avi IT Solutions</a>. We are developing this application with Symfony Framework 3. 
