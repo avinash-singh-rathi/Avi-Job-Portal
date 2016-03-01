@@ -1,12 +1,11 @@
 Avi-Job-Portal
 ==============
 
-Avi Job portal is under the development process. This is developed by the company <a href="http://aviitsolutions.com" target="_blank">Avi IT Solutions</a>.
-This project is developed as Open-source by using the following Open-Source Technologies: PHP 5.4, Apache, Mysql, Linux.
+Avi Job portal is under the development process. This is developed by the company <a href="http://aviitsolutions.com" target="_blank">Avi IT Solutions</a>. We are developing this application with Symfony Framework 3. 
 
 Description
 ============
-Avi Job Portal is developed in the core framework, where the user can perform the following functions:
+This project is a kind of job board which is developed in Symfony 3.
 1) Search the Jobs
 2) Can Apply for the Jobs
 3) Can Post the resume
@@ -17,7 +16,7 @@ Basically, the portal is divided for two sections, one is for job seeker and ano
 
 Requirements
 =============
-1) PHP 5.3x
+1) PHP 5.4x
 2) MySQL
-3)PHP PDO
+3) PHP PDO
 4) Apache
