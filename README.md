@@ -7,7 +7,8 @@ This application is under development.
 
 Description
 ============
-This project is a kind of job board which is developed in Symfony 3.
+This project is developed in Symfony 3+. Currently this job board will have following functionalities.
+
 1) Search the Jobs
 2) Can Apply for the Jobs
 3) Can Post the resume
