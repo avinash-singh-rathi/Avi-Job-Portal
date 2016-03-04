@@ -1,3 +1,11 @@
+avi_job_category:
+    resource: "@AviJobBundle/Controller/CategoryController.php"
+    type:     annotation
+
+avi_job:
+    resource: "@AviJobBundle/Resources/config/routing.xml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
