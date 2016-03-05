@@ -19,7 +19,7 @@ class CategoryType extends AbstractType
             ->add('name')
             ->add('url')
             ->add('content')
-            ->add( 'img' , FileType::class, array('label' => 'Image (Upload image)'))
+            ->add( 'file')
             ->add('imgalt')
             ->add('parent')
             ->add('title')

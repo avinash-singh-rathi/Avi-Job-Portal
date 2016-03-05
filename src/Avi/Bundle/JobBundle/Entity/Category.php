@@ -3,6 +3,8 @@
 namespace Avi\Bundle\JobBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Category
@@ -10,8 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="category")
  * @ORM\Entity(repositoryClass="Avi\Bundle\JobBundle\Repository\CategoryRepository")
  */
-class Category
-{
+class Category {
+
     /**
      * @var int
      *
@@ -105,14 +107,22 @@ class Category
      */
     private $status;
 
+    /**
+     @Assert\File(
+     *     maxSize = "5M",
+     *     mimeTypes = {"image/jpeg", "image/gif", "image/png", "image/tiff"},
+     *     maxSizeMessage = "The maxmimum allowed file size is 5MB.",
+     *     mimeTypesMessage = "Only the filetypes image are allowed."
+     * )
+     */
+    private $file;
 
     /**
      * Get id
      *
      * @return int
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -123,8 +133,7 @@ class Category
      *
      * @return Category
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
@@ -135,8 +144,7 @@ class Category
      *
      * @return string
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
@@ -147,8 +155,7 @@ class Category
      *
      * @return Category
      */
-    public function setUrl($url)
-    {
+    public function setUrl($url) {
         $this->url = $url;
 
         return $this;
@@ -159,8 +166,7 @@ class Category
      *
      * @return string
      */
-    public function getUrl()
-    {
+    public function getUrl() {
         return $this->url;
     }
 
@@ -171,8 +177,7 @@ class Category
      *
      * @return Category
      */
-    public function setContent($content)
-    {
+    public function setContent($content) {
         $this->content = $content;
 
         return $this;
@@ -183,8 +188,7 @@ class Category
      *
      * @return string
      */
-    public function getContent()
-    {
+    public function getContent() {
         return $this->content;
     }
 
@@ -195,8 +199,7 @@ class Category
      *
      * @return Category
      */
-    public function setImg($img)
-    {
+    public function setImg($img) {
         $this->img = $img;
 
         return $this;
@@ -207,8 +210,7 @@ class Category
      *
      * @return string
      */
-    public function getImg()
-    {
+    public function getImg() {
         return $this->img;
     }
 
@@ -219,8 +221,7 @@ class Category
      *
      * @return Category
      */
-    public function setImgalt($imgalt)
-    {
+    public function setImgalt($imgalt) {
         $this->imgalt = $imgalt;
 
         return $this;
@@ -231,8 +232,7 @@ class Category
      *
      * @return string
      */
-    public function getImgalt()
-    {
+    public function getImgalt() {
         return $this->imgalt;
     }
 
@@ -243,8 +243,7 @@ class Category
      *
      * @return Category
      */
-    public function setParent($parent)
-    {
+    public function setParent($parent) {
         $this->parent = $parent;
 
         return $this;
@@ -255,8 +254,7 @@ class Category
      *
      * @return int
      */
-    public function getParent()
-    {
+    public function getParent() {
         return $this->parent;
     }
 
@@ -267,8 +265,7 @@ class Category
      *
      * @return Category
      */
-    public function setTitle($title)
-    {
+    public function setTitle($title) {
         $this->title = $title;
 
         return $this;
@@ -279,8 +276,7 @@ class Category
      *
      * @return string
      */
-    public function getTitle()
-    {
+    public function getTitle() {
         return $this->title;
     }
 
@@ -291,8 +287,7 @@ class Category
      *
      * @return Category
      */
-    public function setKeywords($keywords)
-    {
+    public function setKeywords($keywords) {
         $this->keywords = $keywords;
 
         return $this;
@@ -303,8 +298,7 @@ class Category
      *
      * @return string
      */
-    public function getKeywords()
-    {
+    public function getKeywords() {
         return $this->keywords;
     }
 
@@ -315,8 +309,7 @@ class Category
      *
      * @return Category
      */
-    public function setDescription($description)
-    {
+    public function setDescription($description) {
         $this->description = $description;
 
         return $this;
@@ -327,8 +320,7 @@ class Category
      *
      * @return string
      */
-    public function getDescription()
-    {
+    public function getDescription() {
         return $this->description;
     }
 
@@ -339,8 +331,7 @@ class Category
      *
      * @return Category
      */
-    public function setDateCreated($dateCreated)
-    {
+    public function setDateCreated($dateCreated) {
         $this->dateCreated = $dateCreated;
 
         return $this;
@@ -351,8 +342,7 @@ class Category
      *
      * @return \DateTime
      */
-    public function getDateCreated()
-    {
+    public function getDateCreated() {
         return $this->dateCreated;
     }
 
@@ -363,8 +353,7 @@ class Category
      *
      * @return Category
      */
-    public function setDateModified($dateModified)
-    {
+    public function setDateModified($dateModified) {
         $this->dateModified = $dateModified;
 
         return $this;
@@ -375,8 +364,7 @@ class Category
      *
      * @return \DateTime
      */
-    public function getDateModified()
-    {
+    public function getDateModified() {
         return $this->dateModified;
     }
 
@@ -387,8 +375,7 @@ class Category
      *
      * @return Category
      */
-    public function setStatus($status)
-    {
+    public function setStatus($status) {
         $this->status = $status;
 
         return $this;
@@ -399,9 +386,74 @@ class Category
      *
      * @return int
      */
-    public function getStatus()
-    {
+    public function getStatus() {
         return $this->status;
     }
-}
 
+    public function getAbsolutePath() {
+        return null === $this->img ? null : $this->getUploadRootDir() . '/' . $this->img;
+    }
+
+    public function getWebPath() {
+        return null === $this->img ? null : $this->getUploadDir() . '/' . $this->img;
+    }
+
+    protected function getUploadRootDir() {
+        // the absolute directory path where uploaded
+        // documents should be saved
+        return __DIR__.'/../../../../../web/' . $this->getUploadDir();
+    }
+
+    protected function getUploadDir() {
+        // get rid of the __DIR__ so it doesn't screw up
+        // when displaying uploaded doc/image in the view.
+        return 'uploads/images';
+    }
+
+    /**
+     * Sets file.
+     *
+     * @param UploadedFile $file
+     */
+    public function setFile(UploadedFile $file = null) {
+        $this->file = $file;
+    }
+
+    /**
+     * Get file.
+     *
+     * @return UploadedFile
+     */
+    public function getFile() {
+        return $this->file;
+    }
+
+    public function upload() {
+        // the file property can be empty if the field is not required
+        if (null === $this->getFile()) {
+            return;
+        }
+
+        // use the original file name here but you should
+        // sanitize it at least to avoid any security issues
+        // move takes the target directory and then the
+        // target filename to move to
+        
+        $file=$this->getFile();
+        
+        $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+        //$imgDir = $this->container->getParameter('kernel.root_dir') . '/../web/uploads/images';
+
+
+        $this->getFile()->move(
+                $this->getUploadRootDir(), $fileName
+        );
+
+        // set the path property to the filename where you've saved the file
+        $this->img = $fileName;
+
+        // clean up the file property as you won't need it anymore
+        $this->file = null;
+    }
+
+}

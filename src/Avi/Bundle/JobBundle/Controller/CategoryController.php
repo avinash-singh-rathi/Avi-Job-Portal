@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Avi\Bundle\JobBundle\Entity\Category;
 use Avi\Bundle\JobBundle\Form\CategoryType;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Category controller.
@@ -44,20 +45,8 @@ class CategoryController extends Controller {
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
-            $file = $category->getImg();
-
-            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
-
-            $imgDir = $this->container->getParameter('kernel.root_dir') . '/../web/uploads/images';
-
-            $file->move($imgDir, $fileName);
-
-
-            $category->setImg($fileName);
-
-
             $em = $this->getDoctrine()->getManager();
+            $category->upload(); 
             $em->persist($category);
             $em->flush();
 
@@ -98,6 +87,7 @@ class CategoryController extends Controller {
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $category->upload();
             $em->persist($category);
             $em->flush();
 
