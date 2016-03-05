@@ -45,14 +45,14 @@ class Category
     /**
      * @var string
      *
-     * @ORM\Column(name="img", type="string", length=300)
+     * @ORM\Column(name="img", type="string", length=300, nullable=true)
      */
     private $img;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="imgalt", type="string", length=255)
+     * @ORM\Column(name="imgalt", type="string", length=255, nullable=true)
      */
     private $imgalt;
 

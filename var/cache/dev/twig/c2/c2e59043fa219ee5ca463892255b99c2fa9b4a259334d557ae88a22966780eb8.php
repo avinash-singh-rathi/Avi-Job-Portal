@@ -15,14 +15,15 @@ class __TwigTemplate_1c37352d805eca665f21b4e247eda2945fdda7c746f9738beeed3ab6417
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0ad2f70dd3ccf481a54d869ca1df860f4af047b50c63771f526db30a425c0762 = $this->env->getExtension("native_profiler");
-        $__internal_0ad2f70dd3ccf481a54d869ca1df860f4af047b50c63771f526db30a425c0762->enter($__internal_0ad2f70dd3ccf481a54d869ca1df860f4af047b50c63771f526db30a425c0762_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AviJobBundle:Default:index.html.twig"));
+        $__internal_2d0664d3e127e50881545ac6ecd4b7c960abc67f03611c246e99888876ef5b19 = $this->env->getExtension("native_profiler");
+        $__internal_2d0664d3e127e50881545ac6ecd4b7c960abc67f03611c246e99888876ef5b19->enter($__internal_2d0664d3e127e50881545ac6ecd4b7c960abc67f03611c246e99888876ef5b19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AviJobBundle:Default:index.html.twig"));
 
         // line 1
-        echo "Hello World!
+        echo "<h1>Welcome to Avi Job Portal!</h1>
+
 ";
         
-        $__internal_0ad2f70dd3ccf481a54d869ca1df860f4af047b50c63771f526db30a425c0762->leave($__internal_0ad2f70dd3ccf481a54d869ca1df860f4af047b50c63771f526db30a425c0762_prof);
+        $__internal_2d0664d3e127e50881545ac6ecd4b7c960abc67f03611c246e99888876ef5b19->leave($__internal_2d0664d3e127e50881545ac6ecd4b7c960abc67f03611c246e99888876ef5b19_prof);
 
     }
 
@@ -36,5 +37,6 @@ class __TwigTemplate_1c37352d805eca665f21b4e247eda2945fdda7c746f9738beeed3ab6417
         return array (  22 => 1,);
     }
 }
-/* Hello World!*/
+/* <h1>Welcome to Avi Job Portal!</h1>*/
+/* */
 /* */

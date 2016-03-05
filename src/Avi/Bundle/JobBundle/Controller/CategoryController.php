@@ -14,22 +14,21 @@ use Avi\Bundle\JobBundle\Form\CategoryType;
  *
  * @Route("/avi-category")
  */
-class CategoryController extends Controller
-{
+class CategoryController extends Controller {
+
     /**
      * Lists all Category entities.
      *
      * @Route("/", name="avi-category_index")
      * @Method("GET")
      */
-    public function indexAction()
-    {
+    public function indexAction() {
         $em = $this->getDoctrine()->getManager();
 
         $categories = $em->getRepository('AviJobBundle:Category')->findAll();
 
-        return $this->render('category/index.html.twig', array(
-            'categories' => $categories,
+        return $this->render('AviJobBundle:category/index.html.twig', array(
+                    'categories' => $categories,
         ));
     }
 
@@ -39,13 +38,25 @@ class CategoryController extends Controller
      * @Route("/new", name="avi-category_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
-    {
+    public function newAction(Request $request) {
         $category = new Category();
         $form = $this->createForm('Avi\Bundle\JobBundle\Form\CategoryType', $category);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            
+            $file = $category->getImg();
+
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+
+            $imgDir = $this->container->getParameter('kernel.root_dir') . '/../web/uploads/images';
+
+            $file->move($imgDir, $fileName);
+
+
+            $category->setImg($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($category);
             $em->flush();
@@ -53,9 +64,9 @@ class CategoryController extends Controller
             return $this->redirectToRoute('avi-category_show', array('id' => $category->getId()));
         }
 
-        return $this->render('category/new.html.twig', array(
-            'category' => $category,
-            'form' => $form->createView(),
+        return $this->render('AviJobBundle:category/new.html.twig', array(
+                    'category' => $category,
+                    'form' => $form->createView(),
         ));
     }
 
@@ -65,13 +76,12 @@ class CategoryController extends Controller
      * @Route("/{id}", name="avi-category_show")
      * @Method("GET")
      */
-    public function showAction(Category $category)
-    {
+    public function showAction(Category $category) {
         $deleteForm = $this->createDeleteForm($category);
 
-        return $this->render('category/show.html.twig', array(
-            'category' => $category,
-            'delete_form' => $deleteForm->createView(),
+        return $this->render('AviJobBundle:category/show.html.twig', array(
+                    'category' => $category,
+                    'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -81,8 +91,7 @@ class CategoryController extends Controller
      * @Route("/{id}/edit", name="avi-category_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, Category $category)
-    {
+    public function editAction(Request $request, Category $category) {
         $deleteForm = $this->createDeleteForm($category);
         $editForm = $this->createForm('Avi\Bundle\JobBundle\Form\CategoryType', $category);
         $editForm->handleRequest($request);
@@ -95,10 +104,10 @@ class CategoryController extends Controller
             return $this->redirectToRoute('avi-category_edit', array('id' => $category->getId()));
         }
 
-        return $this->render('category/edit.html.twig', array(
-            'category' => $category,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+        return $this->render('AviJobBundle:category/edit.html.twig', array(
+                    'category' => $category,
+                    'edit_form' => $editForm->createView(),
+                    'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -108,8 +117,7 @@ class CategoryController extends Controller
      * @Route("/{id}", name="avi-category_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Category $category)
-    {
+    public function deleteAction(Request $request, Category $category) {
         $form = $this->createDeleteForm($category);
         $form->handleRequest($request);
 
@@ -129,12 +137,12 @@ class CategoryController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Category $category)
-    {
+    private function createDeleteForm(Category $category) {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('avi-category_delete', array('id' => $category->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
+                        ->setAction($this->generateUrl('avi-category_delete', array('id' => $category->getId())))
+                        ->setMethod('DELETE')
+                        ->getForm()
         ;
     }
+
 }
