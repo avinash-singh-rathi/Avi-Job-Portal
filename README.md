@@ -1,6 +1,4 @@
-![](http://aviitsolutions.com/india/images/avi-it-solutions-logo.png)
-
-Avi Job Portal
+Avi Job Portal ![](http://aviitsolutions.com/india/images/avi-it-solutions-logo.png)
 ============================================================================
 
 Avi Job Portal is a Symfony 3 (v3.0.3) distribution under the development process. This is developed by the company <a href="http://aviitsolutions.com">Avi IT Solutions</a>. 
