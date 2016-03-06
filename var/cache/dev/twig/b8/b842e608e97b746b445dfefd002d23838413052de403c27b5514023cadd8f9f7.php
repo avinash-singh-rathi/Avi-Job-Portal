@@ -1,6 +1,6 @@
 <?php
 
-/* AviJobBundle:category/index.html.twig */
+/* AviJobBundle:category:index.html.twig */
 class __TwigTemplate_0327216498bf17e4b2a1578d76f1cff36667b3052163e9aceb536001a2d5c40a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_0327216498bf17e4b2a1578d76f1cff36667b3052163e9aceb536001a2d
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "AviJobBundle:category/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "AviJobBundle:category:index.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -21,20 +21,20 @@ class __TwigTemplate_0327216498bf17e4b2a1578d76f1cff36667b3052163e9aceb536001a2d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_98c5dcb4f8673b8e95662dd693a4c9787c193324e933dbfde6b7d43b20685e94 = $this->env->getExtension("native_profiler");
-        $__internal_98c5dcb4f8673b8e95662dd693a4c9787c193324e933dbfde6b7d43b20685e94->enter($__internal_98c5dcb4f8673b8e95662dd693a4c9787c193324e933dbfde6b7d43b20685e94_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AviJobBundle:category/index.html.twig"));
+        $__internal_2070c3ea744986c4801d76616516df58d244321ab01843348b5542f27ffdc746 = $this->env->getExtension("native_profiler");
+        $__internal_2070c3ea744986c4801d76616516df58d244321ab01843348b5542f27ffdc746->enter($__internal_2070c3ea744986c4801d76616516df58d244321ab01843348b5542f27ffdc746_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AviJobBundle:category:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_98c5dcb4f8673b8e95662dd693a4c9787c193324e933dbfde6b7d43b20685e94->leave($__internal_98c5dcb4f8673b8e95662dd693a4c9787c193324e933dbfde6b7d43b20685e94_prof);
+        $__internal_2070c3ea744986c4801d76616516df58d244321ab01843348b5542f27ffdc746->leave($__internal_2070c3ea744986c4801d76616516df58d244321ab01843348b5542f27ffdc746_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ed9882661ce5c82e2ee1c7543c60bfc328dfa168dc03276a641a7e695c9a9c42 = $this->env->getExtension("native_profiler");
-        $__internal_ed9882661ce5c82e2ee1c7543c60bfc328dfa168dc03276a641a7e695c9a9c42->enter($__internal_ed9882661ce5c82e2ee1c7543c60bfc328dfa168dc03276a641a7e695c9a9c42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_838572238a0c0a57ce588096ac0d59f7455d139887522a75db2cf27bcd2afffa = $this->env->getExtension("native_profiler");
+        $__internal_838572238a0c0a57ce588096ac0d59f7455d139887522a75db2cf27bcd2afffa->enter($__internal_838572238a0c0a57ce588096ac0d59f7455d139887522a75db2cf27bcd2afffa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Category list</h1>
@@ -160,13 +160,13 @@ class __TwigTemplate_0327216498bf17e4b2a1578d76f1cff36667b3052163e9aceb536001a2d
     </ul>
 ";
         
-        $__internal_ed9882661ce5c82e2ee1c7543c60bfc328dfa168dc03276a641a7e695c9a9c42->leave($__internal_ed9882661ce5c82e2ee1c7543c60bfc328dfa168dc03276a641a7e695c9a9c42_prof);
+        $__internal_838572238a0c0a57ce588096ac0d59f7455d139887522a75db2cf27bcd2afffa->leave($__internal_838572238a0c0a57ce588096ac0d59f7455d139887522a75db2cf27bcd2afffa_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "AviJobBundle:category/index.html.twig";
+        return "AviJobBundle:category:index.html.twig";
     }
 
     public function isTraitable()

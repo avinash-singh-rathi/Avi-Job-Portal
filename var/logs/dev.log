@@ -303,3 +303,6 @@
 [2016-03-06 00:47:56] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2016-03-06 00:47:57] doctrine.DEBUG: SELECT t0.id AS id_1, t0.name AS name_2, t0.url AS url_3, t0.content AS content_4, t0.img AS img_5, t0.imgalt AS imgalt_6, t0.parent AS parent_7, t0.title AS title_8, t0.keywords AS keywords_9, t0.description AS description_10, t0.date_created AS date_created_11, t0.date_modified AS date_modified_12, t0.status AS status_13 FROM category t0 WHERE t0.id = ? ["1"] []
 [2016-03-06 00:47:58] request.INFO: Matched route "_wdt". {"route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"4478b0","_route":"_wdt"},"request_uri":"http://avijobportal.in/_wdt/4478b0"} []
+[2016-03-06 00:49:55] request.INFO: Matched route "avi_job_homepage". {"route_parameters":{"_controller":"Avi\\Bundle\\JobBundle\\Controller\\DefaultController::indexAction","_route":"avi_job_homepage"},"request_uri":"http://avijobportal.in/"} []
+[2016-03-06 00:49:55] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-03-06 21:01:39] php.DEBUG: rmdir(E:\wamp\www\avijobportal\Avi-Job-Portal\var\cache\de~): Directory not empty {"type":2,"file":"E:\\wamp\\www\\avijobportal\\Avi-Job-Portal\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Filesystem\\Filesystem.php","line":168,"level":28928} []

@@ -1,6 +1,6 @@
 <?php
 
-/* AviJobBundle:category/show.html.twig */
+/* AviJobBundle:category:show.html.twig */
 class __TwigTemplate_1a934679d45e3c29dea49cb746db52e00e67152bbe428b3270edb7253bc86523 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_1a934679d45e3c29dea49cb746db52e00e67152bbe428b3270edb7253bc
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "AviJobBundle:category/show.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "AviJobBundle:category:show.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -21,20 +21,20 @@ class __TwigTemplate_1a934679d45e3c29dea49cb746db52e00e67152bbe428b3270edb7253bc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1a809a0c002cc98f830b90ad5c94eea67e56e9021364a5b4bb536dea762c8cde = $this->env->getExtension("native_profiler");
-        $__internal_1a809a0c002cc98f830b90ad5c94eea67e56e9021364a5b4bb536dea762c8cde->enter($__internal_1a809a0c002cc98f830b90ad5c94eea67e56e9021364a5b4bb536dea762c8cde_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AviJobBundle:category/show.html.twig"));
+        $__internal_4c3d5a54f911c082635287b9cf065efc310e9cfe816f80dd8cd633e3a5db49d5 = $this->env->getExtension("native_profiler");
+        $__internal_4c3d5a54f911c082635287b9cf065efc310e9cfe816f80dd8cd633e3a5db49d5->enter($__internal_4c3d5a54f911c082635287b9cf065efc310e9cfe816f80dd8cd633e3a5db49d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AviJobBundle:category:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1a809a0c002cc98f830b90ad5c94eea67e56e9021364a5b4bb536dea762c8cde->leave($__internal_1a809a0c002cc98f830b90ad5c94eea67e56e9021364a5b4bb536dea762c8cde_prof);
+        $__internal_4c3d5a54f911c082635287b9cf065efc310e9cfe816f80dd8cd633e3a5db49d5->leave($__internal_4c3d5a54f911c082635287b9cf065efc310e9cfe816f80dd8cd633e3a5db49d5_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_8b930b15d696f20831323a198a14ea253c9f06c731f54318cb7d0952a11739bf = $this->env->getExtension("native_profiler");
-        $__internal_8b930b15d696f20831323a198a14ea253c9f06c731f54318cb7d0952a11739bf->enter($__internal_8b930b15d696f20831323a198a14ea253c9f06c731f54318cb7d0952a11739bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c29fabd3aa9d840cb1b167dcf6f47fec833918bb3f5da26cb2cac6864adf7804 = $this->env->getExtension("native_profiler");
+        $__internal_c29fabd3aa9d840cb1b167dcf6f47fec833918bb3f5da26cb2cac6864adf7804->enter($__internal_c29fabd3aa9d840cb1b167dcf6f47fec833918bb3f5da26cb2cac6864adf7804_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Category</h1>
@@ -166,13 +166,13 @@ class __TwigTemplate_1a934679d45e3c29dea49cb746db52e00e67152bbe428b3270edb7253bc
     </ul>
 ";
         
-        $__internal_8b930b15d696f20831323a198a14ea253c9f06c731f54318cb7d0952a11739bf->leave($__internal_8b930b15d696f20831323a198a14ea253c9f06c731f54318cb7d0952a11739bf_prof);
+        $__internal_c29fabd3aa9d840cb1b167dcf6f47fec833918bb3f5da26cb2cac6864adf7804->leave($__internal_c29fabd3aa9d840cb1b167dcf6f47fec833918bb3f5da26cb2cac6864adf7804_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "AviJobBundle:category/show.html.twig";
+        return "AviJobBundle:category:show.html.twig";
     }
 
     public function isTraitable()
