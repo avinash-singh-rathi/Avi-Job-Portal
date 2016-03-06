@@ -1,25 +1,45 @@
+![](http://aviitsolutions.com/india/images/avi-it-solutions-logo.png)
+
 Avi Job Portal
-==============
+============================================================================
 
-Avi Job portal is under the development process. This is developed by the company <a href="http://aviitsolutions.com" target="_blank">Avi IT Solutions</a>. We are developing this application with Symfony Framework 3.
+Avi Job Portal is a Symfony 3 (v3.0.3) distribution under the development process. This is developed by the company <a href="http://aviitsolutions.com">Avi IT Solutions</a>. 
 
-This application is under development. 
+Major bundles are configured (FOSUser) combined with our bundle (AviJobBundle).
 
-Description
-============
-This project is developed in Symfony 3+. Currently this job board will have following functionalities.
-
-1) Search the Jobs
-2) Can Apply for the Jobs
-3) Can Post the resume
-4) Can Post the Jobs
-5) Can see the applied resumes for the jobs
-
-Basically, the portal is divided for two sections, one is for job seeker and another for the employer.
+You can find the requirements for Symfony3 here http://symfony.com/doc/current/reference/requirements.html
+You can find the documentation for Symfony3 here http://symfony.com/doc/current/book/index.html
 
 Requirements
-=============
-1) >=PHP 5.5
-2) MySQL
-3) PHP PDO
-4) Apache
+----------------------------------------------------
+
+* [PHP](http://www.php.net) 5.5 or later
+* Installation via [Composer](http://getcomposer.org/)
+
+
+Included Bundles List
+------------------------------------------------------
+
+	1. FOSUserBundle (https://github.com/FriendsOfSymfony/FOSUserBundle)
+	2. Symfony/AsseticBundle
+
+
+Useful Links and Documentation
+----------------------------------------------
+
+Symfony2 Documentation
+
+http://symfony.com/doc/current/index.html
+
+Doctrine2 ORM Documentation
+
+http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html
+
+Symfony2 Cheatsheet
+
+http://www.symfony2cheatsheet.com/
+
+Website with listing of available Symfony2 Bundles
+
+http://knpbundles.com/
+
