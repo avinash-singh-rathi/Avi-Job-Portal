@@ -6,6 +6,9 @@ avi_job:
     resource: "@AviJobBundle/Resources/config/routing.xml"
     prefix:   /
 
+avi_user:
+    resource: "@AviJobBundle/Resources/config/all.xml"
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

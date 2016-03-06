@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: 'E:\wamp\www\avijobportal\Avi-Job-Portal\app/config/routing_dev.yml'
